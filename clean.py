@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("/Users/tonysaenz/Desktop/WA_Fn-UseC_-HR-Employee-Attrition.csv")
+df = df.to_csv("hr_attrition_clean.csv", index=False)
 df = df.drop(columns=["EmployeeCount", "Over18", "StandardHours", "DailyRate", "HourlyRate", "MonthlyRate"])
 
 df["AttritionFlag"] = (df["Attrition"] == "Yes").astype(int)
