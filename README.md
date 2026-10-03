@@ -21,9 +21,9 @@ Which employee groups have the highest attrition, and what factors (overtime, te
 
 ## Process
 
-1. **Exploration (`01_explore.py`):** Checked shape, data types, missing values, and duplicates. Found no missing values or duplicates, three constant columns, and an overall attrition rate of 16.1%.
-2. **Cleaning (`02_clean.py`):** Dropped constant and unused columns, created a 1/0 attrition flag, converted coded ratings (1 to 4) into readable labels, and created age, tenure, and income bands. Output: `hr_attrition_clean.csv`.
-3. **Analysis (`03_analysis.py`):** Calculated attrition rate and employee count for each group across 13 variables, plus a job satisfaction by environment satisfaction cross-tab.
+1. **Exploration (`explore.py`):** Checked shape, data types, missing values, and duplicates. Found no missing values or duplicates, three constant columns, and an overall attrition rate of 16.1%.
+2. **Cleaning (`clean.py`):** Dropped constant and unused columns, created a 1/0 attrition flag, converted coded ratings (1 to 4) into readable labels, and created age, tenure, and income bands. Output: `hr_attrition_clean.csv`.
+3. **Analysis (`analysis.py`):** Calculated attrition rate and employee count for each group across 13 variables, plus a job satisfaction by environment satisfaction cross-tab.
 4. **Dashboard:** Built 9 worksheets in Tableau and combined them into one dashboard with filters for Department, Age Band, Gender, and Overtime. All dashboard values were checked against the Python output.
 
 ## Key Findings
@@ -61,9 +61,9 @@ Which employee groups have the highest attrition, and what factors (overtime, te
 
 | File | Description |
 |---|---|
-| `01_explore.py` | Initial data checks |
-| `02_clean.py` | Cleaning and feature creation |
-| `03_analysis.py` | Attrition rates by group and satisfaction cross-tab |
+| `explore.py` | Initial data checks |
+| `clean.py` | Cleaning and feature creation |
+| `analysis.py` | Attrition rates by group and satisfaction cross-tab |
 | `hr_attrition_clean.csv` | Cleaned dataset used in Tableau |
 
 ## How to Run
