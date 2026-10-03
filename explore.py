@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("/Users/tonysaenz/Desktop/WA_Fn-UseC_-HR-Employee-Attrition.csv")
+df = pd.read_csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
 print(df.shape)
 print(df.dtypes)
 print("Missing:", df.isna().sum().sum(), "Duplicates:", df.duplicated().sum())
