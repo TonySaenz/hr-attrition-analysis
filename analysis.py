@@ -1,6 +1,6 @@
 import pandas as pd
 
-   df = pd.read_csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
+   df = pd.read_csv("hr_attrition_clean.csv")
 
 cols = ["Department", "JobRole", "JobLevel", "OverTime", "BusinessTravel", "MaritalStatus",
         "AgeBand", "TenureBand", "IncomeBand", "StockOptionLevel",
