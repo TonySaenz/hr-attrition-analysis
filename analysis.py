@@ -1,6 +1,6 @@
 import pandas as pd
 
-   df = pd.read_csv("hr_attrition_clean.csv")
+df = pd.read_csv("hr_attrition_clean.csv")
 
 cols = ["Department", "JobRole", "JobLevel", "OverTime", "BusinessTravel", "MaritalStatus",
         "AgeBand", "TenureBand", "IncomeBand", "StockOptionLevel",
@@ -12,4 +12,4 @@ for col in cols:
     print(t.sort_values("AttritionRate", ascending=False), "\n")
 
 print((pd.crosstab(df["JobSatisfactionLabel"], df["EnvironmentSatisfactionLabel"],
-                   values=df["AttritionFlag"], aggfunc="mean") * 100).round(1))to
+                   values=df["AttritionFlag"], aggfunc="mean") * 100).round(1))
