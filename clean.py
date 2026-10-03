@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = df.to_csv("hr_attrition_clean.csv", index=False)
+df = pd.read_csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
 df = df.drop(columns=["EmployeeCount", "Over18", "StandardHours", "DailyRate", "HourlyRate", "MonthlyRate"])
 
 df["AttritionFlag"] = (df["Attrition"] == "Yes").astype(int)
@@ -15,7 +15,7 @@ df["AgeBand"] = pd.cut(df["Age"], [17, 25, 35, 45, 60], labels=["18-25", "26-35"
 df["TenureBand"] = pd.cut(df["YearsAtCompany"], [-1, 2, 5, 10, 40], labels=["0-2", "3-5", "6-10", "11+"])
 df["IncomeBand"] = pd.qcut(df["MonthlyIncome"], 4, labels=["Q1 Lowest", "Q2", "Q3", "Q4 Highest"])
 
-df.to_csv("/Users/tonysaenz/Desktop/hr_attrition_clean.csv", index=False)
+df.to_csv("hr_attrition_clean.csv", index=False)
 
 print(df.shape)
 print(df[["AgeBand", "TenureBand", "IncomeBand"]].isna().sum())
